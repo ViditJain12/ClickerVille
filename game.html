@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title></title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="container-1">
+                <h1 class="header">Click on the emoji</h1>
+                <p class="clicks">Clicks: <span id="score">0</span></p>
+                <p class="cps">Clicks Per Second: <span id="cps">0</span></p>
+                <br>
+                <div id="floatingmoney"></div>
+                <br>
+                <img id="emoji" class="hover" src="https://cdn.discordapp.com/attachments/915424661842559056/925138657675968553/R.png" alt="" width="250px" height="250px" onclick="scoreAdded(1)"> 
+                <br>
+                <div class="box" style="padding: 0px; overflow-y: scroll; overflow-x: hidden; width: 100%; height: 50%; border: 1px solid gray;">
+                    <div id="autoc" class="four">
+                        <p>Autoclickers:</p>
+                    </div>
+                    <div id="x2" class="four">
+                        <p>Double Clicks:</p>
+                    </div>
+                    <div id="bman" class="four">
+                        <p>Business Men:</p>
+                    </div>
+                    <div id="mine" class="four">
+                        <p>Mines:</p>
+                    </div>
+                    <div id="bank" class="four">
+                        <p>Banks:</p>
+                    </div>
+                    <div id="building" class="four">
+                        <p>Buildings:</p>
+                    </div>
+                    <div id="rocket" class="four">
+                        <p>Rockets:</p>
+                    </div>
+                    <div id="elonid" class="four">
+                        <p>Elon Musks:</p>
+                    </div>
+                    <div id="lotter" class="four">
+                        <p>Lottery Tickets:</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="container">
+                <div class="shopbox">
+                    <h1 class="shop">Shop</h1>
+                    <br>
+                    <button class="BUTTON" onclick="quit()">
+                        Go Back
+                    </button>
+                    <button class="BUTTON" onclick="autoclick()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://th.bing.com/th/id/R.3d895e39604fb76fa0103f8959468b6d?rik=r8yOXURhBrXIYQ&pid=ImgRaw&r=0"> 
+                        Auto Clicker - cost [<span id="cursorcost">15</span>&nbspclicks] --&nbsp<span id="cursors">0</span>&nbspowned</p>
+                    </button>
+                    <button class="BUTTON" onclick="times2()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://th.bing.com/th/id/R.8709b0da00cae07e1da04024f9f07d80?rik=3%2ba1Gl5an2uS8g&riu=http%3a%2f%2fwww.vantagefilm.com%2ffile%2fedee%2fdownloads%2flogos%2f2x.png&ehk=Oq3sAOedRXxRUe2T9UAVgCKZs%2fMtW43BKQi%2f7widOys%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">
+                        Double Click - cost [<span id="multiplierCost">100</span>&nbspclicks] --&nbsp<span id="multiplierowned">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="bman()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://th.bing.com/th/id/R.425c80cd0ae7438db8422c221a1a73dd?rik=kwDBgZam3UrL9A&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_548737.png&ehk=Pqvg6omtYcAQH4qeeV7W4%2f3YjukcQPBKg1WayYpUjgM%3d&risl=&pid=ImgRaw&r=0">
+                        Business Man - cost [<span id="bmancost">300</span>&nbspclicks] --&nbsp<span id="bmanshired">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="mine()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://cdn.discordapp.com/attachments/915424661842559056/925165761557843978/marengo-mining-clipart-limited-7.png">
+                        Mine - cost [<span id="minecost">1000</span>&nbspclicks] --&nbsp<span id="mineowed">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="RobBank()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://cdn.discordapp.com/attachments/915424661842559056/925167617696759818/bank-emoji-clipart-md.png">
+                        Rob Bank - cost [<span id="RobCost">5000</span>&nbspclicks] --&nbsp<span id="BanksRobbed">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="building()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://cdn.discordapp.com/attachments/915424661842559056/925184352634155028/R.png">
+                        Construct a Building - cost [<span id="buildingcost">10000</span>&nbspclicks] --&nbsp<span id="buildingowed">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="rocket()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://cdn.onlinewebfonts.com/svg/img_452053.png">
+                        Launch a Rocket - cost [<span id="rocketCost">20000</span>&nbspclicks] --&nbsp<span id="rocketsOwned">0</span>&nbspowned</button>
+                    </button> 
+                    <button class="BUTTON" onclick="elonmuskbuy()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://th.bing.com/th/id/R.43e969979dfd8ae4b364f517571aee58?rik=iBJuUmfu9wwg8Q&pid=ImgRaw&r=0">
+                        Buy Elon Musk - cost [<span id="eloncost">100000</span>&nbspclicks] --&nbsp<span id="elonowned">0</span>&nbspowned</button>
+                    </button>
+                    <button class="BUTTON" onclick="Lottery()">
+                        <img style="width: 50px; height: 50px; margin-right: 5px;" src="https://media.discordapp.net/attachments/915424661842559056/925196406308876329/latest.png">
+                        Buy a Lottery Ticket - cost [<span id="lotterycost">5000</span>&nbspclicks] --&nbsp<span id="lotteryowned">0</span>&nbspowned</button>
+                    </button> 
+                    <br>
+                    <h1 style="color: white;">CLICKER MARKET</h1>
+                    <br>
+                    <button onclick="first()" class="BUTTON">INVEST IN CLICKVIDIA STOCK FOR 350 CLICKS FOR 1 DAY</button>
+                    <button onclick="second()"class="BUTTON">INVEST IN CLICKVIDIA STOCK FOR 350 CLICKS FOR 5 DAYS</button>
+                    <button onclick="third()" class="BUTTON">INVEST IN CLICKVIDIA STOCK FOR 350 CLICKS FOR 10 DAYS</button>
+                    <br>
+                    <button onclick="fourth()" class="BUTTON">INVEST IN CLAPPLE STOCK FOR 500 CLICKS FOR 1 DAY</button>
+                    <button onclick="fifth()" class="BUTTON">INVEST IN CLAPPLE STOCK FOR 500 CLICKS FOR 5 DAY</button>
+                    <button onclick="sixth()" class="BUTTON">INVEST IN CLAPPLE STOCK FOR 500 CLICKS FOR 10 DAY</button>
+                    <br>
+                    <button onclick="seventh()" class="BUTTON">INVEST IN CLIPTO CURRENCY FOR 1000 CLICKS FOR 1 DAY</button>
+                    <button  onclick="eight()" class="BUTTON">INVEST IN CLIPTO CURRENCY FOR 1000 CLICKS FOR 5 DAY</button>
+                    <button onclick="nine()" class="BUTTON">INVEST IN CLIPTO CURRENCY FOR 1000 CLICKS FOR 10 DAY</button>
+                    <br>
+                    <h1 style="color: white;">Custom Cursors</h1>
+                    <br>
+                    <button onclick="cursorstyle1()" style="width: 40%;" class="BUTTON">
+                        <img src="http://bringerp.free.fr/Files/RotMG/cursor.gif" alt="">
+                        &nbsp Omega Cursor - 1000 clicks
+                    </button>
+                    <button onclick="cursorstyle2()" style="width: 40%;" class="BUTTON">
+                        <img src="cursor-3-32.gif" alt="">
+                        &nbsp Green Light - 10 clicks
+                    </button>
+                    <button onclick="cursorstyle3()" style="width: 40%;" class="BUTTON">
+                        <img src="pin-6-32.png" alt="">
+                        &nbsp Google Maps - 10 clicks
+                    </button>
+                    <button onclick="cursorstyle4()" style="width: 40%;" class="BUTTON">
+                        <img src="cursor-3-32.png" alt="">
+                        &nbsp Simple - 10 clicks
+                    </button>
+                    <button onclick="cursorstyle5()" style="width: 40%;" class="BUTTON">
+                        <img src="https://www.cursor.cc/cursor/181/10/cursor.png" alt="">
+                        &nbsp RAINNNBOWW - 10 clicks
+                    </button>
+                    <button onclick="cursorstyle6()" style="width: 40%;" class="BUTTON">
+                        <img src="https://th.bing.com/th/id/R.76bd303ed4e8e0ab03c66f3fc9635659?rik=ccYf0qZavCje7g&riu=http%3a%2f%2fcursors4.totallyfreecursors.com%2fthumbnails%2f1pointer63.gif&ehk=gURt7TrV9H%2fVqD6WrztABKk37Et4LjlOOYJaY1VSNp4%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        &nbsp Facial Hair - 10 clicks
+                    </button>
+                    <button onclick="cursorstyle7()" style="width: 40%;" class="BUTTON">
+                        <img src="https://www.cursor.cc/cursor/649/1/cursor.png" alt="">
+                        &nbsp Blocky - 10 clicks
+                    </button>
+                    <br>
+                    <h1 style="color: white;">Custom Emojis</h1>
+                    <br>
+                    <button onclick="change1()" style="width: 40%;" class="BUTTON">
+                        <img style="width: 32px;" src="https://whatemoji.org/wp-content/uploads/2020/07/Face-With-Monocle-Emoji.png" alt="">
+                        &nbsp Change to Le Monocle
+                    </button>
+                    <button onclick="change2()" style="width: 40%;" class="BUTTON">
+                        <img style="width: 32px;" src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/57282/face-screaming-in-fear-emoji-clipart-md.png" alt="">
+                        &nbsp Change to Scream
+                    </button>
+                    <button onclick="change3()" style="width: 40%;" class="BUTTON">
+                        <img style="width: 32px;" src="https://media.tenor.com/images/2a487a6d1e796878bd8e7b472b5981cc/tenor.gif" alt="">
+                        &nbsp Change to Cool
+                    </button>
+                    <button onclick="change4()" style="width: 40%;" class="BUTTON">
+                        <img style="width: 32px;" src="https://media2.giphy.com/media/PmXsJnwzEebcoO88HN/source.gif" alt="">
+                        &nbsp Change to Cool 2
+                    </button>
+                    <button onclick="change5()" style="width: 40%;" class="BUTTON">
+                        <img style="width: 32px;" src="https://th.bing.com/th/id/R.fbbb49adeffa74d27a071d0168a1028c?rik=f%2bwaO1IPEDRHQg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f11%2fLMAO-Emoji-PNG-Clipart.png&ehk=esaXrYXprCql0wf4eZBw%2fKFGvXSYjT5uKEjpH3QAUqQ%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        &nbsp Change to LMAO
+                    </button>
+                </div>
+            </div>
+        </div>   
+        
+    </body>
+    <script src="script.js"></script>
+    <script>
+        emoji = document.getElementById("emoji");
+        function change1(){
+            emoji.src="https://whatemoji.org/wp-content/uploads/2020/07/Face-With-Monocle-Emoji.png";
+        }
+        function change2(){
+            emoji.src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/57282/face-screaming-in-fear-emoji-clipart-md.png";
+        }
+        function change3(){
+            emoji.src="https://media.tenor.com/images/2a487a6d1e796878bd8e7b472b5981cc/tenor.gif";
+        }
+        function change4(){
+            emoji.src="https://media2.giphy.com/media/PmXsJnwzEebcoO88HN/source.gif";
+        }
+        function change5(){
+            emoji.src="https://th.bing.com/th/id/R.fbbb49adeffa74d27a071d0168a1028c?rik=f%2bwaO1IPEDRHQg&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f11%2fLMAO-Emoji-PNG-Clipart.png&ehk=esaXrYXprCql0wf4eZBw%2fKFGvXSYjT5uKEjpH3QAUqQ%3d&risl=&pid=ImgRaw&r=0";
+        }
+        function quit(){
+            savegame = confirm("Are you sure you want to quit? Your progress will be lost.");
+            if(savegame){
+                window.location.href ="index.html";
+            }else{
+                
+            }
+        }
+    </script>
+</html>
